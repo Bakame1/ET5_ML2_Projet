@@ -15,6 +15,17 @@ Ce projet met en œuvre l'apprentissage par transfert (Transfer Learning) en uti
 pip install -r requirements.txt
 ```
 
+### Pour lancer les scripts
+Se placer dans le dossier src
+```
+cd src
+```
+Puis lancer le script souhaité
+```
+python script.py
+```
+
+
 ## 🗂️ Arborescence du projet
 ```text
 ET5_ML2_Projet/
