@@ -1,7 +1,9 @@
 from torch import nn
 import torch
 from sklearn.svm import LinearSVC
-from torchvision import transforms, datasets, models 
+from torchvision import transforms, datasets, models
+
+import build_train_test 
 
 vgg_weights = models.VGG16_Weights.IMAGENET1K_V1
 vgg16_base = models.vgg16(weights=vgg_weights)
@@ -56,6 +58,9 @@ class VGG16relu7(nn.Module):
 
 
 if __name__ == "__main__":
+    # cree le train et test set
+    build_train_test.organize_dataset('data/15-Scene')
+    # Verifier que le GPU est disponible
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Appareil utilisé : {device}")
     # Charger les données
