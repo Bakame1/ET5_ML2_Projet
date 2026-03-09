@@ -42,5 +42,5 @@ def organize_dataset(source_root, train_ratio=0.2):
 
     print("\nOrganisation terminée !")
 
-source_path = 'data/15-Scene' 
+source_path = 'data/15-Scene'
 organize_dataset(source_path)
